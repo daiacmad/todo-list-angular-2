@@ -1,0 +1,14 @@
+<div class="form-group form-login" *ngIf="!loading">
+	<h1 class="text-center">Login</h1>
+	<input type="text" class="form-control" placeholder="email" [(ngModel)]="user.email">
+	<input type="password" class="form-control" placeholder="password" [(ngModel)]="user.password">
+	<button type="button" class="form-button" (click)="postLogin()">
+		Login
+	</button>
+	<button type="button" class="form-button" style="margin-top:10px;" (click)="getLogout()">
+		Logout
+	</button>
+</div>
+<div *ngIf="loading">
+	<h1 style="margin-top:20px;text-align: center">Loading .....</h1>
+</div>

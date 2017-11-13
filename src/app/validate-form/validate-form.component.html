@@ -1,0 +1,15 @@
+<form #validationForm="ngForm" class="form-validate" (submit)="submitform(validationForm)" novalidate>
+	<div class="form-group">
+		<label for="email">Email:</label>
+    	<input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="model.email" required (keydown)="changeEmail(email)">
+    	<p><b>invalid:</b> {{email.invalid}}</p>
+    	<p><b>dirty:</b> {{email.dirty}}</p>
+    	<p><b>pristine:</b> {{email.pristine}}</p>
+    	<p *ngIf="email.errors"><b>required:</b> {{email.errors.required}}</p>
+    	<p><b>Touch:</b> {{email.touched}}</p>
+	</div>
+
+	<div class="form-group">
+		<button type="submit" class="btn btn-large">Submit</button>
+	</div>
+</form>

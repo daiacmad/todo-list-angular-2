@@ -1,0 +1,20 @@
+<table class="table">
+	<thead>
+	  <tr>
+	  	<th>Checked</th>
+	    <th>Name</th>
+	    <th>Description</th>
+	    <th>Corporation</th>
+	    <th>Details</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr *ngFor="let hero of heroes">
+	  	<td><input type="checkbox"/></td>
+	    <td>{{hero.name}}</td>
+	    <td>{{hero.description}}</td>
+	    <td>{{hero.corporation}}</td>
+	    <td><a [routerLink]="['../hero-detail' , hero._id ]">asd</a></td>
+	  </tr>
+	</tbody>
+</table>

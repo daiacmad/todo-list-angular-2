@@ -1,0 +1,8 @@
+<div class="list-todo" *ngFor="let todo of todos ">
+	<label class="item-todo custom-control custom-checkbox " [ngClass]="{'complete' : todo.complete}">
+	    <input type="checkbox" class="item-todo__check-box custom-control-input"  [checked]="todo.complete" (click)="toggleComplete(todo)">
+	    <span class="custom-control-indicator"></span>
+	    <span class="custom-control-description">{{todo.title}}</span>
+     	<button class="item-todo__button" (click)="removeTodo(todo)">X</button>
+	</label>
+</div>
